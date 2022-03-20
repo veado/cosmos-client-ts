@@ -64,6 +64,9 @@
   "directories": {
     "lib": "dist"
   },
+  "files": [
+    "lib"
+  ],
   "exports": {
     ".": {
       "node": "./cjs/index.js",
