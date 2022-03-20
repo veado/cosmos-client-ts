@@ -1,0 +1,10 @@
+import { CosmosSDK } from '../../sdk';
+import { AccAddress, ValAddress } from '../../types';
+export declare function communityPool(sdk: CosmosSDK): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20041, any>>;
+export declare function delegationTotalRewards(sdk: CosmosSDK, delegatorAddress: AccAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20042, any>>;
+export declare function delegationRewards(sdk: CosmosSDK, delegatorAddress: AccAddress, validatorAddress: ValAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod, any>>;
+export declare function delegatorValidators(sdk: CosmosSDK, delegatorAddress: AccAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20044, any>>;
+export declare function delegatorWithdrawAddress(sdk: CosmosSDK, delegatorAddress: AccAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20045, any>>;
+export declare function validatorCommission(sdk: CosmosSDK, validatorAddress: ValAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod, any>>;
+export declare function validatorOutstandingRewards(sdk: CosmosSDK, validatorAddress: ValAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20047, any>>;
+export declare function validatorSlashes(sdk: CosmosSDK, validatorAddress: ValAddress, startingHeight?: string, endingHeight?: string, paginationKey?: string, paginationOffset?: bigint, paginationLimit?: bigint, paginationCountTotal?: boolean): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20048, any>>;

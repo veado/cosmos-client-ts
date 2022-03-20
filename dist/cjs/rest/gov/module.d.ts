@@ -1,0 +1,10 @@
+import { CosmosSDK } from '../../sdk';
+import { AccAddress } from '../../types';
+export declare function params(sdk: CosmosSDK, paramsType: string): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20051, any>>;
+export declare function proposals(sdk: CosmosSDK, proposalStatus?: 'PROPOSAL_STATUS_UNSPECIFIED' | 'PROPOSAL_STATUS_DEPOSIT_PERIOD' | 'PROPOSAL_STATUS_VOTING_PERIOD' | 'PROPOSAL_STATUS_PASSED' | 'PROPOSAL_STATUS_REJECTED' | 'PROPOSAL_STATUS_FAILED', voter?: string, depositor?: string, paginationKey?: string, paginationOffset?: bigint, paginationLimit?: bigint, paginationCountTotal?: boolean): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20052, any>>;
+export declare function proposal(sdk: CosmosSDK, proposalID: string): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20053, any>>;
+export declare function deposits(sdk: CosmosSDK, proposalID: string, paginationKey?: string, paginationOffset?: bigint, paginationLimit?: bigint, paginationCountTotal?: boolean): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20054, any>>;
+export declare function deposit(sdk: CosmosSDK, proposalID: string, depositor: AccAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20055, any>>;
+export declare function tallyresult(sdk: CosmosSDK, proposalID: string): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20056, any>>;
+export declare function votes(sdk: CosmosSDK, proposalID: string, paginationKey?: string, paginationOffset?: bigint, paginationLimit?: bigint, paginationCountTotal?: boolean): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20057, any>>;
+export declare function vote(sdk: CosmosSDK, proposalID: string, voter: AccAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20058, any>>;
