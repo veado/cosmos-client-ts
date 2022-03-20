@@ -65,7 +65,7 @@
     "lib": "dist"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "exports": {
     ".": {
