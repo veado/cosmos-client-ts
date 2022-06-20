@@ -12,7 +12,7 @@
     "test:watch": "jest --watch",
     "build": "rm -r dist ; mkdir dist && npm run build:cjs && npm run build:esm && node bundle",
     "build:cjs": "tsc --build --clean && tsc --target es5 --module commonjs && mv lib dist/cjs",
-    "build:esm": "tsc --build --clean && tsc --target esnext --module esnext && mv lib dist/esm",
+    "build:esm": "tsc --build --clean && tsc --target es2019 --module esnext && mv lib dist/esm",
     "gen:openapi": "bash ./gen-openapi.sh",
     "gen:proto": "bash ./gen-proto.sh",
     "prepare": "husky install || exit 0"
@@ -61,6 +61,9 @@
   },
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "node": "./cjs/index.js",
