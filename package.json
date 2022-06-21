@@ -61,17 +61,20 @@
   },
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
+  "directories": {
+    "lib": "dist"
+  },
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "node": "./cjs/index.js",
-      "default": "./esm/index.js"
+      "node": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
     },
     "./openapi": {
-      "node": "./cjs/openapi/index.js",
-      "default": "./esm/openapi/index.js"
+      "node": "./dist/cjs/openapi/index.js",
+      "default": "./dist/esm/openapi/index.js"
     },
     "./package.json": "./package.json"
   }
