@@ -303,7 +303,7 @@ var AuthApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'address' is not null or undefined
                     (0, common_1.assertParamExists)('authAccountsAddressGet', 'address', address);
                     localVarPath = "/auth/accounts/{address}"
-                        .replace("{" + "address" + "}", encodeURIComponent(String(address)));
+                        .replace("{".concat("address", "}"), encodeURIComponent(String(address)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -429,7 +429,7 @@ var BankApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'account' is not null or undefined
                     (0, common_1.assertParamExists)('bankAccountsAddressTransfersPost', 'account', account);
                     localVarPath = "/bank/accounts/{address}/transfers"
-                        .replace("{" + "address" + "}", encodeURIComponent(String(address)));
+                        .replace("{".concat("address", "}"), encodeURIComponent(String(address)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -465,7 +465,7 @@ var BankApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'address' is not null or undefined
                     (0, common_1.assertParamExists)('bankBalancesAddressGet', 'address', address);
                     localVarPath = "/bank/balances/{address}"
-                        .replace("{" + "address" + "}", encodeURIComponent(String(address)));
+                        .replace("{".concat("address", "}"), encodeURIComponent(String(address)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -499,7 +499,7 @@ var BankApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'denomination' is not null or undefined
                     (0, common_1.assertParamExists)('bankTotalDenominationGet', 'denomination', denomination);
                     localVarPath = "/bank/total/{denomination}"
-                        .replace("{" + "denomination" + "}", encodeURIComponent(String(denomination)));
+                        .replace("{".concat("denomination", "}"), encodeURIComponent(String(denomination)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -817,7 +817,7 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionDelegatorsDelegatorAddrRewardsGet', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/distribution/delegators/{delegatorAddr}/rewards"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -852,7 +852,7 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionDelegatorsDelegatorAddrRewardsPost', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/distribution/delegators/{delegatorAddr}/rewards"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -891,8 +891,8 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/distribution/delegators/{delegatorAddr}/rewards/{validatorAddr}"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)))
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)))
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -930,8 +930,8 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost', 'validatorAddr', validatorAddr);
                     localVarPath = "/distribution/delegators/{delegatorAddr}/rewards/{validatorAddr}"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)))
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)))
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -967,7 +967,7 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionDelegatorsDelegatorAddrWithdrawAddressGet', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/distribution/delegators/{delegatorAddr}/withdraw_address"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1002,7 +1002,7 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionDelegatorsDelegatorAddrWithdrawAddressPost', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/distribution/delegators/{delegatorAddr}/withdraw_address"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1068,7 +1068,7 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionValidatorsValidatorAddrGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/distribution/validators/{validatorAddr}"
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1102,7 +1102,7 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionValidatorsValidatorAddrOutstandingRewardsGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/distribution/validators/{validatorAddr}/outstanding_rewards"
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1136,7 +1136,7 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionValidatorsValidatorAddrRewardsGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/distribution/validators/{validatorAddr}/rewards"
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1171,7 +1171,7 @@ var DistributionApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('distributionValidatorsValidatorAddrRewardsPost', 'validatorAddr', validatorAddr);
                     localVarPath = "/distribution/validators/{validatorAddr}/rewards"
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2120,8 +2120,8 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'depositor' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdDepositsDepositorGet', 'depositor', depositor);
                     localVarPath = "/gov/proposals/{proposalId}/deposits/{depositor}"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)))
-                        .replace("{" + "depositor" + "}", encodeURIComponent(String(depositor)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)))
+                        .replace("{".concat("depositor", "}"), encodeURIComponent(String(depositor)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2155,7 +2155,7 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdDepositsGet', 'proposalId', proposalId);
                     localVarPath = "/gov/proposals/{proposalId}/deposits"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2192,7 +2192,7 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'postDepositBody' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdDepositsPost', 'postDepositBody', postDepositBody);
                     localVarPath = "/gov/proposals/{proposalId}/deposits"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2228,7 +2228,7 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdGet', 'proposalId', proposalId);
                     localVarPath = "/gov/proposals/{proposalId}"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2262,7 +2262,7 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdProposerGet', 'proposalId', proposalId);
                     localVarPath = "/gov/proposals/{proposalId}/proposer"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2296,7 +2296,7 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdTallyGet', 'proposalId', proposalId);
                     localVarPath = "/gov/proposals/{proposalId}/tally"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2330,7 +2330,7 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdVotesGet', 'proposalId', proposalId);
                     localVarPath = "/gov/proposals/{proposalId}/votes"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2367,7 +2367,7 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'postVoteBody' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdVotesPost', 'postVoteBody', postVoteBody);
                     localVarPath = "/gov/proposals/{proposalId}/votes"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -2406,8 +2406,8 @@ var GovernanceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'voter' is not null or undefined
                     (0, common_1.assertParamExists)('govProposalsProposalIdVotesVoterGet', 'voter', voter);
                     localVarPath = "/gov/proposals/{proposalId}/votes/{voter}"
-                        .replace("{" + "proposalId" + "}", encodeURIComponent(String(proposalId)))
-                        .replace("{" + "voter" + "}", encodeURIComponent(String(voter)));
+                        .replace("{".concat("proposalId", "}"), encodeURIComponent(String(proposalId)))
+                        .replace("{".concat("voter", "}"), encodeURIComponent(String(voter)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3428,7 +3428,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'address' is not null or undefined
                     (0, common_1.assertParamExists)('account', 'address', address);
                     localVarPath = "/cosmos/auth/v1beta1/accounts/{address}"
-                        .replace("{" + "address" + "}", encodeURIComponent(String(address)));
+                        .replace("{".concat("address", "}"), encodeURIComponent(String(address)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3515,7 +3515,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'address' is not null or undefined
                     (0, common_1.assertParamExists)('allBalances', 'address', address);
                     localVarPath = "/cosmos/bank/v1beta1/balances/{address}"
-                        .replace("{" + "address" + "}", encodeURIComponent(String(address)));
+                        .replace("{".concat("address", "}"), encodeURIComponent(String(address)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3615,8 +3615,8 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'grantee' is not null or undefined
                     (0, common_1.assertParamExists)('allowance', 'grantee', grantee);
                     localVarPath = "/cosmos/feegrant/v1beta1/allowance/{granter}/{grantee}"
-                        .replace("{" + "granter" + "}", encodeURIComponent(String(granter)))
-                        .replace("{" + "grantee" + "}", encodeURIComponent(String(grantee)));
+                        .replace("{".concat("granter", "}"), encodeURIComponent(String(granter)))
+                        .replace("{".concat("grantee", "}"), encodeURIComponent(String(grantee)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3654,7 +3654,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'grantee' is not null or undefined
                     (0, common_1.assertParamExists)('allowances', 'grantee', grantee);
                     localVarPath = "/cosmos/feegrant/v1beta1/allowances/{grantee}"
-                        .replace("{" + "grantee" + "}", encodeURIComponent(String(grantee)));
+                        .replace("{".concat("grantee", "}"), encodeURIComponent(String(grantee)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3731,7 +3731,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'name' is not null or undefined
                     (0, common_1.assertParamExists)('appliedPlan', 'name', name);
                     localVarPath = "/cosmos/upgrade/v1beta1/applied_plan/{name}"
-                        .replace("{" + "name" + "}", encodeURIComponent(String(name)));
+                        .replace("{".concat("name", "}"), encodeURIComponent(String(name)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3796,8 +3796,8 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'denom' is not null or undefined
                     (0, common_1.assertParamExists)('balance', 'denom', denom);
                     localVarPath = "/cosmos/bank/v1beta1/balances/{address}/{denom}"
-                        .replace("{" + "address" + "}", encodeURIComponent(String(address)))
-                        .replace("{" + "denom" + "}", encodeURIComponent(String(denom)));
+                        .replace("{".concat("address", "}"), encodeURIComponent(String(address)))
+                        .replace("{".concat("denom", "}"), encodeURIComponent(String(denom)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3920,8 +3920,8 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('delegation', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/validators/{validator_addr}/delegations/{delegator_addr}"
-                        .replace("{" + "validator_addr" + "}", encodeURIComponent(String(validatorAddr)))
-                        .replace("{" + "delegator_addr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("validator_addr", "}"), encodeURIComponent(String(validatorAddr)))
+                        .replace("{".concat("delegator_addr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3957,8 +3957,8 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddress' is not null or undefined
                     (0, common_1.assertParamExists)('delegationRewards', 'validatorAddress', validatorAddress);
                     localVarPath = "/cosmos/distribution/v1beta1/delegators/{delegator_address}/rewards/{validator_address}"
-                        .replace("{" + "delegator_address" + "}", encodeURIComponent(String(delegatorAddress)))
-                        .replace("{" + "validator_address" + "}", encodeURIComponent(String(validatorAddress)));
+                        .replace("{".concat("delegator_address", "}"), encodeURIComponent(String(delegatorAddress)))
+                        .replace("{".concat("validator_address", "}"), encodeURIComponent(String(validatorAddress)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -3991,7 +3991,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddress' is not null or undefined
                     (0, common_1.assertParamExists)('delegationTotalRewards', 'delegatorAddress', delegatorAddress);
                     localVarPath = "/cosmos/distribution/v1beta1/delegators/{delegator_address}/rewards"
-                        .replace("{" + "delegator_address" + "}", encodeURIComponent(String(delegatorAddress)));
+                        .replace("{".concat("delegator_address", "}"), encodeURIComponent(String(delegatorAddress)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4029,7 +4029,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('delegatorDelegations', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/delegations/{delegator_addr}"
-                        .replace("{" + "delegator_addr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegator_addr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4082,7 +4082,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('delegatorUnbondingDelegations', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/delegators/{delegator_addr}/unbonding_delegations"
-                        .replace("{" + "delegator_addr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegator_addr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4133,8 +4133,8 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('delegatorValidator', 'validatorAddr', validatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/delegators/{delegator_addr}/validators/{validator_addr}"
-                        .replace("{" + "delegator_addr" + "}", encodeURIComponent(String(delegatorAddr)))
-                        .replace("{" + "validator_addr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("delegator_addr", "}"), encodeURIComponent(String(delegatorAddr)))
+                        .replace("{".concat("validator_addr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4167,7 +4167,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddress' is not null or undefined
                     (0, common_1.assertParamExists)('delegatorValidators', 'delegatorAddress', delegatorAddress);
                     localVarPath = "/cosmos/distribution/v1beta1/delegators/{delegator_address}/validators"
-                        .replace("{" + "delegator_address" + "}", encodeURIComponent(String(delegatorAddress)));
+                        .replace("{".concat("delegator_address", "}"), encodeURIComponent(String(delegatorAddress)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4200,7 +4200,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddress' is not null or undefined
                     (0, common_1.assertParamExists)('delegatorWithdrawAddress', 'delegatorAddress', delegatorAddress);
                     localVarPath = "/cosmos/distribution/v1beta1/delegators/{delegator_address}/withdraw_address"
-                        .replace("{" + "delegator_address" + "}", encodeURIComponent(String(delegatorAddress)));
+                        .replace("{".concat("delegator_address", "}"), encodeURIComponent(String(delegatorAddress)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4233,7 +4233,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'denom' is not null or undefined
                     (0, common_1.assertParamExists)('denomMetadata', 'denom', denom);
                     localVarPath = "/cosmos/bank/v1beta1/denoms_metadata/{denom}"
-                        .replace("{" + "denom" + "}", encodeURIComponent(String(denom)));
+                        .replace("{".concat("denom", "}"), encodeURIComponent(String(denom)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4271,7 +4271,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'denom' is not null or undefined
                     (0, common_1.assertParamExists)('denomOwners', 'denom', denom);
                     localVarPath = "/cosmos/bank/v1beta1/denom_owners/{denom}"
-                        .replace("{" + "denom" + "}", encodeURIComponent(String(denom)));
+                        .replace("{".concat("denom", "}"), encodeURIComponent(String(denom)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4371,8 +4371,8 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'depositor' is not null or undefined
                     (0, common_1.assertParamExists)('deposit', 'depositor', depositor);
                     localVarPath = "/cosmos/gov/v1beta1/proposals/{proposal_id}/deposits/{depositor}"
-                        .replace("{" + "proposal_id" + "}", encodeURIComponent(String(proposalId)))
-                        .replace("{" + "depositor" + "}", encodeURIComponent(String(depositor)));
+                        .replace("{".concat("proposal_id", "}"), encodeURIComponent(String(proposalId)))
+                        .replace("{".concat("depositor", "}"), encodeURIComponent(String(depositor)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4410,7 +4410,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('deposits', 'proposalId', proposalId);
                     localVarPath = "/cosmos/gov/v1beta1/proposals/{proposal_id}/deposits"
-                        .replace("{" + "proposal_id" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposal_id", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4487,7 +4487,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'evidenceHash' is not null or undefined
                     (0, common_1.assertParamExists)('evidence', 'evidenceHash', evidenceHash);
                     localVarPath = "/cosmos/evidence/v1beta1/evidence/{evidence_hash}"
-                        .replace("{" + "evidence_hash" + "}", encodeURIComponent(String(evidenceHash)));
+                        .replace("{".concat("evidence_hash", "}"), encodeURIComponent(String(evidenceHash)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4520,7 +4520,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'paramsType' is not null or undefined
                     (0, common_1.assertParamExists)('govParams', 'paramsType', paramsType);
                     localVarPath = "/cosmos/gov/v1beta1/params/{params_type}"
-                        .replace("{" + "params_type" + "}", encodeURIComponent(String(paramsType)));
+                        .replace("{".concat("params_type", "}"), encodeURIComponent(String(paramsType)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4614,7 +4614,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'height' is not null or undefined
                     (0, common_1.assertParamExists)('historicalInfo', 'height', height);
                     localVarPath = "/cosmos/staking/v1beta1/historical_info/{height}"
-                        .replace("{" + "height" + "}", encodeURIComponent(String(height)));
+                        .replace("{".concat("height", "}"), encodeURIComponent(String(height)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4804,7 +4804,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('proposal', 'proposalId', proposalId);
                     localVarPath = "/cosmos/gov/v1beta1/proposals/{proposal_id}"
-                        .replace("{" + "proposal_id" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposal_id", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4905,7 +4905,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('redelegations', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/delegators/{delegator_addr}/redelegations"
-                        .replace("{" + "delegator_addr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegator_addr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -4959,7 +4959,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'consAddress' is not null or undefined
                     (0, common_1.assertParamExists)('signingInfo', 'consAddress', consAddress);
                     localVarPath = "/cosmos/slashing/v1beta1/signing_infos/{cons_address}"
-                        .replace("{" + "cons_address" + "}", encodeURIComponent(String(consAddress)));
+                        .replace("{".concat("cons_address", "}"), encodeURIComponent(String(consAddress)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5075,7 +5075,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorValidators', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/delegators/{delegator_addr}/validators"
-                        .replace("{" + "delegator_addr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegator_addr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5152,7 +5152,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'denom' is not null or undefined
                     (0, common_1.assertParamExists)('supplyOf', 'denom', denom);
                     localVarPath = "/cosmos/bank/v1beta1/supply/{denom}"
-                        .replace("{" + "denom" + "}", encodeURIComponent(String(denom)));
+                        .replace("{".concat("denom", "}"), encodeURIComponent(String(denom)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5185,7 +5185,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('tallyResult', 'proposalId', proposalId);
                     localVarPath = "/cosmos/gov/v1beta1/proposals/{proposal_id}/tally"
-                        .replace("{" + "proposal_id" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposal_id", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5270,8 +5270,8 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('unbondingDelegation', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/validators/{validator_addr}/delegations/{delegator_addr}/unbonding_delegation"
-                        .replace("{" + "validator_addr" + "}", encodeURIComponent(String(validatorAddr)))
-                        .replace("{" + "delegator_addr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("validator_addr", "}"), encodeURIComponent(String(validatorAddr)))
+                        .replace("{".concat("delegator_addr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5304,7 +5304,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'lastHeight' is not null or undefined
                     (0, common_1.assertParamExists)('upgradedConsensusState', 'lastHeight', lastHeight);
                     localVarPath = "/cosmos/upgrade/v1beta1/upgraded_consensus_state/{last_height}"
-                        .replace("{" + "last_height" + "}", encodeURIComponent(String(lastHeight)));
+                        .replace("{".concat("last_height", "}"), encodeURIComponent(String(lastHeight)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5337,7 +5337,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('validator', 'validatorAddr', validatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/validators/{validator_addr}"
-                        .replace("{" + "validator_addr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validator_addr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5370,7 +5370,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddress' is not null or undefined
                     (0, common_1.assertParamExists)('validatorCommission', 'validatorAddress', validatorAddress);
                     localVarPath = "/cosmos/distribution/v1beta1/validators/{validator_address}/commission"
-                        .replace("{" + "validator_address" + "}", encodeURIComponent(String(validatorAddress)));
+                        .replace("{".concat("validator_address", "}"), encodeURIComponent(String(validatorAddress)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5408,7 +5408,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('validatorDelegations', 'validatorAddr', validatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/validators/{validator_addr}/delegations"
-                        .replace("{" + "validator_addr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validator_addr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5456,7 +5456,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddress' is not null or undefined
                     (0, common_1.assertParamExists)('validatorOutstandingRewards', 'validatorAddress', validatorAddress);
                     localVarPath = "/cosmos/distribution/v1beta1/validators/{validator_address}/outstanding_rewards"
-                        .replace("{" + "validator_address" + "}", encodeURIComponent(String(validatorAddress)));
+                        .replace("{".concat("validator_address", "}"), encodeURIComponent(String(validatorAddress)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5496,7 +5496,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddress' is not null or undefined
                     (0, common_1.assertParamExists)('validatorSlashes', 'validatorAddress', validatorAddress);
                     localVarPath = "/cosmos/distribution/v1beta1/validators/{validator_address}/slashes"
-                        .replace("{" + "validator_address" + "}", encodeURIComponent(String(validatorAddress)));
+                        .replace("{".concat("validator_address", "}"), encodeURIComponent(String(validatorAddress)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5555,7 +5555,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('validatorUnbondingDelegations', 'validatorAddr', validatorAddr);
                     localVarPath = "/cosmos/staking/v1beta1/validators/{validator_addr}/unbonding_delegations"
-                        .replace("{" + "validator_addr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validator_addr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5659,8 +5659,8 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'voter' is not null or undefined
                     (0, common_1.assertParamExists)('vote', 'voter', voter);
                     localVarPath = "/cosmos/gov/v1beta1/proposals/{proposal_id}/votes/{voter}"
-                        .replace("{" + "proposal_id" + "}", encodeURIComponent(String(proposalId)))
-                        .replace("{" + "voter" + "}", encodeURIComponent(String(voter)));
+                        .replace("{".concat("proposal_id", "}"), encodeURIComponent(String(proposalId)))
+                        .replace("{".concat("voter", "}"), encodeURIComponent(String(voter)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -5698,7 +5698,7 @@ var QueryApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'proposalId' is not null or undefined
                     (0, common_1.assertParamExists)('votes', 'proposalId', proposalId);
                     localVarPath = "/cosmos/gov/v1beta1/proposals/{proposal_id}/votes"
-                        .replace("{" + "proposal_id" + "}", encodeURIComponent(String(proposalId)));
+                        .replace("{".concat("proposal_id", "}"), encodeURIComponent(String(proposalId)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -8563,7 +8563,7 @@ var ServiceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'height' is not null or undefined
                     (0, common_1.assertParamExists)('getBlockByHeight', 'height', height);
                     localVarPath = "/cosmos/base/tendermint/v1beta1/blocks/{height}"
-                        .replace("{" + "height" + "}", encodeURIComponent(String(height)));
+                        .replace("{".concat("height", "}"), encodeURIComponent(String(height)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -8732,7 +8732,7 @@ var ServiceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'hash' is not null or undefined
                     (0, common_1.assertParamExists)('getTx', 'hash', hash);
                     localVarPath = "/cosmos/tx/v1beta1/txs/{hash}"
-                        .replace("{" + "hash" + "}", encodeURIComponent(String(hash)));
+                        .replace("{".concat("hash", "}"), encodeURIComponent(String(hash)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -8827,7 +8827,7 @@ var ServiceApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'height' is not null or undefined
                     (0, common_1.assertParamExists)('getValidatorSetByHeight', 'height', height);
                     localVarPath = "/cosmos/base/tendermint/v1beta1/validatorsets/{height}"
-                        .replace("{" + "height" + "}", encodeURIComponent(String(height)));
+                        .replace("{".concat("height", "}"), encodeURIComponent(String(height)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9485,7 +9485,7 @@ var SlashingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'unjailBody' is not null or undefined
                     (0, common_1.assertParamExists)('slashingValidatorsValidatorAddrUnjailPost', 'unjailBody', unjailBody);
                     localVarPath = "/slashing/validators/{validatorAddr}/unjail"
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9703,7 +9703,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrDelegationsGet', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/delegations"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9737,7 +9737,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrDelegationsPost', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/delegations"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9776,8 +9776,8 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrDelegationsValidatorAddrGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/delegations/{validatorAddr}"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)))
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)))
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9812,7 +9812,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrRedelegationsPost', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/redelegations"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9848,7 +9848,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrUnbondingDelegationsGet', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/unbonding_delegations"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9882,7 +9882,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrUnbondingDelegationsPost', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/unbonding_delegations"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9921,8 +9921,8 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrUnbondingDelegationsValidatorAddrGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/unbonding_delegations/{validatorAddr}"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)))
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)))
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9956,7 +9956,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'delegatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrValidatorsGet', 'delegatorAddr', delegatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/validators"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -9993,8 +9993,8 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingDelegatorsDelegatorAddrValidatorsValidatorAddrGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/staking/delegators/{delegatorAddr}/validators/{validatorAddr}"
-                        .replace("{" + "delegatorAddr" + "}", encodeURIComponent(String(delegatorAddr)))
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("delegatorAddr", "}"), encodeURIComponent(String(delegatorAddr)))
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -10172,7 +10172,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingValidatorsValidatorAddrDelegationsGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/staking/validators/{validatorAddr}/delegations"
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -10206,7 +10206,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingValidatorsValidatorAddrGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/staking/validators/{validatorAddr}"
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -10240,7 +10240,7 @@ var StakingApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'validatorAddr' is not null or undefined
                     (0, common_1.assertParamExists)('stakingValidatorsValidatorAddrUnbondingDelegationsGet', 'validatorAddr', validatorAddr);
                     localVarPath = "/staking/validators/{validatorAddr}/unbonding_delegations"
-                        .replace("{" + "validatorAddr" + "}", encodeURIComponent(String(validatorAddr)));
+                        .replace("{".concat("validatorAddr", "}"), encodeURIComponent(String(validatorAddr)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -11055,7 +11055,7 @@ var TendermintRPCApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'height' is not null or undefined
                     (0, common_1.assertParamExists)('blocksHeightGet', 'height', height);
                     localVarPath = "/blocks/{height}"
-                        .replace("{" + "height" + "}", encodeURIComponent(String(height)));
+                        .replace("{".concat("height", "}"), encodeURIComponent(String(height)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -11146,7 +11146,7 @@ var TendermintRPCApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'height' is not null or undefined
                     (0, common_1.assertParamExists)('validatorsetsHeightGet', 'height', height);
                     localVarPath = "/validatorsets/{height}"
-                        .replace("{" + "height" + "}", encodeURIComponent(String(height)));
+                        .replace("{".concat("height", "}"), encodeURIComponent(String(height)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -11578,7 +11578,7 @@ var TransactionsApiAxiosParamCreator = function (configuration) {
                     // verify required parameter 'hash' is not null or undefined
                     (0, common_1.assertParamExists)('txsHashGet', 'hash', hash);
                     localVarPath = "/txs/{hash}"
-                        .replace("{" + "hash" + "}", encodeURIComponent(String(hash)));
+                        .replace("{".concat("hash", "}"), encodeURIComponent(String(hash)));
                     localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;

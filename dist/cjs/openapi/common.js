@@ -85,7 +85,7 @@ exports.DUMMY_BASE_URL = 'https://example.com';
  */
 var assertParamExists = function (functionName, paramName, paramValue) {
     if (paramValue === null || paramValue === undefined) {
-        throw new base_1.RequiredError(paramName, "Required parameter " + paramName + " was null or undefined when calling " + functionName + ".");
+        throw new base_1.RequiredError(paramName, "Required parameter ".concat(paramName, " was null or undefined when calling ").concat(functionName, "."));
     }
 };
 exports.assertParamExists = assertParamExists;

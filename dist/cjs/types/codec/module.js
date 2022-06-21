@@ -162,7 +162,7 @@ function protoJSONToInstance(value) {
         return Error("This object doesn't have information of type");
     }
     if (!config_1.config.codecMaps.constructor[typeURL]) {
-        return Error("This type is not registered: " + typeURL + "}");
+        return Error("This type is not registered: ".concat(typeURL, "}"));
     }
     var newValue = {};
     try {
@@ -227,7 +227,7 @@ function instanceToProtoAny(value) {
     }
     var typeURL = constructor && config_1.config.codecMaps.inv.get(constructor);
     if (!typeURL) {
-        throw Error("This type is not registered: " + typeURL);
+        throw Error("This type is not registered: ".concat(typeURL));
     }
     var packed = new proto_1.google.protobuf.Any({
         type_url: typeURL,
@@ -247,19 +247,19 @@ function jsDateToGoTimeString(jsDate) {
     var rfc3339 = [
         jsDate.getFullYear(),
         '-',
-        ("0" + (jsDate.getMonth() + 1)).slice(-2),
+        "0".concat(jsDate.getMonth() + 1).slice(-2),
         '-',
-        ("0" + jsDate.getDate()).slice(-2),
+        "0".concat(jsDate.getDate()).slice(-2),
         'T',
-        ("0" + jsDate.getHours()).slice(-2),
+        "0".concat(jsDate.getHours()).slice(-2),
         ':',
-        ("0" + jsDate.getMinutes()).slice(-2),
+        "0".concat(jsDate.getMinutes()).slice(-2),
         ':',
-        ("0" + jsDate.getSeconds()).slice(-2),
+        "0".concat(jsDate.getSeconds()).slice(-2),
         -timezoneHours < 0 ? '' : '+',
-        ("0" + -timezoneHours).slice(-2),
+        "0".concat(-timezoneHours).slice(-2),
         ':',
-        ("0" + timezoneMinutes).slice(-2),
+        "0".concat(timezoneMinutes).slice(-2),
     ].join('');
     return rfc3339;
 }

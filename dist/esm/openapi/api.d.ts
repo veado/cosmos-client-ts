@@ -10833,7 +10833,7 @@ export interface Vote {
  * AuthApi - axios parameter creator
  * @export
  */
-export declare const AuthApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const AuthApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Get the account information on blockchain
@@ -10848,7 +10848,7 @@ export declare const AuthApiAxiosParamCreator: (configuration?: Configuration | 
  * AuthApi - functional programming interface
  * @export
  */
-export declare const AuthApiFp: (configuration?: Configuration | undefined) => {
+export declare const AuthApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Get the account information on blockchain
@@ -10857,13 +10857,13 @@ export declare const AuthApiFp: (configuration?: Configuration | undefined) => {
      * @deprecated
      * @throws {RequiredError}
      */
-    authAccountsAddressGet(address: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2009>>;
+    authAccountsAddressGet(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2009>>;
 };
 /**
  * AuthApi - factory interface
  * @export
  */
-export declare const AuthApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const AuthApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Get the account information on blockchain
@@ -10896,7 +10896,7 @@ export declare class AuthApi extends BaseAPI {
  * BankApi - axios parameter creator
  * @export
  */
-export declare const BankApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const BankApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Send coins from one account to another
@@ -10938,7 +10938,7 @@ export declare const BankApiAxiosParamCreator: (configuration?: Configuration | 
  * BankApi - functional programming interface
  * @export
  */
-export declare const BankApiFp: (configuration?: Configuration | undefined) => {
+export declare const BankApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Send coins from one account to another
@@ -10948,7 +10948,7 @@ export declare const BankApiFp: (configuration?: Configuration | undefined) => {
      * @deprecated
      * @throws {RequiredError}
      */
-    bankAccountsAddressTransfersPost(address: string, account: InlineObject3, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    bankAccountsAddressTransfersPost(address: string, account: InlineObject3, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      *
      * @summary Get the account balances
@@ -10957,7 +10957,7 @@ export declare const BankApiFp: (configuration?: Configuration | undefined) => {
      * @deprecated
      * @throws {RequiredError}
      */
-    bankBalancesAddressGet(address: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
+    bankBalancesAddressGet(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
     /**
      *
      * @summary Total supply of a single coin denomination
@@ -10966,7 +10966,7 @@ export declare const BankApiFp: (configuration?: Configuration | undefined) => {
      * @deprecated
      * @throws {RequiredError}
      */
-    bankTotalDenominationGet(denomination: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<string>>;
+    bankTotalDenominationGet(denomination: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
     /**
      *
      * @summary Total supply of coins in the chain
@@ -10974,13 +10974,13 @@ export declare const BankApiFp: (configuration?: Configuration | undefined) => {
      * @deprecated
      * @throws {RequiredError}
      */
-    bankTotalGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2008>>;
+    bankTotalGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2008>>;
 };
 /**
  * BankApi - factory interface
  * @export
  */
-export declare const BankApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const BankApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Send coins from one account to another
@@ -11070,7 +11070,7 @@ export declare class BankApi extends BaseAPI {
  * DistributionApi - axios parameter creator
  * @export
  */
-export declare const DistributionApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const DistributionApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Community pool parameters
@@ -11097,7 +11097,7 @@ export declare const DistributionApiAxiosParamCreator: (configuration?: Configur
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrRewardsPost: (delegatorAddr: string, withdrawRequestBody?: InlineObject12 | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    distributionDelegatorsDelegatorAddrRewardsPost: (delegatorAddr: string, withdrawRequestBody?: InlineObject12, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      * Query a single delegation reward by a delegator
      * @summary Query a delegation reward
@@ -11118,7 +11118,7 @@ export declare const DistributionApiAxiosParamCreator: (configuration?: Configur
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost: (delegatorAddr: string, validatorAddr: string, withdrawRequestBody?: InlineObject13 | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost: (delegatorAddr: string, validatorAddr: string, withdrawRequestBody?: InlineObject13, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      * Get the delegations\' rewards withdrawal address. This is the address in which the user will receive the reward funds
      * @summary Get the rewards withdrawal address
@@ -11137,7 +11137,7 @@ export declare const DistributionApiAxiosParamCreator: (configuration?: Configur
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrWithdrawAddressPost: (delegatorAddr: string, withdrawRequestBody?: InlineObject14 | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    distributionDelegatorsDelegatorAddrWithdrawAddressPost: (delegatorAddr: string, withdrawRequestBody?: InlineObject14, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Fee distribution parameters
@@ -11182,13 +11182,13 @@ export declare const DistributionApiAxiosParamCreator: (configuration?: Configur
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionValidatorsValidatorAddrRewardsPost: (validatorAddr: string, withdrawRequestBody?: InlineObject15 | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    distributionValidatorsValidatorAddrRewardsPost: (validatorAddr: string, withdrawRequestBody?: InlineObject15, options?: AxiosRequestConfig) => Promise<RequestArgs>;
 };
 /**
  * DistributionApi - functional programming interface
  * @export
  */
-export declare const DistributionApiFp: (configuration?: Configuration | undefined) => {
+export declare const DistributionApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Community pool parameters
@@ -11196,7 +11196,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionCommunityPoolGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
+    distributionCommunityPoolGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
     /**
      * Get the sum of all the rewards earned by delegations by a single delegator
      * @summary Get the total rewards balance from all delegations
@@ -11205,7 +11205,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrRewardsGet(delegatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20023>>;
+    distributionDelegatorsDelegatorAddrRewardsGet(delegatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20023>>;
     /**
      * Withdraw all the delegator\'s delegation rewards
      * @summary Withdraw all the delegator\'s delegation rewards
@@ -11215,7 +11215,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrRewardsPost(delegatorAddr: string, withdrawRequestBody?: InlineObject12 | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    distributionDelegatorsDelegatorAddrRewardsPost(delegatorAddr: string, withdrawRequestBody?: InlineObject12, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      * Query a single delegation reward by a delegator
      * @summary Query a delegation reward
@@ -11225,7 +11225,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
+    distributionDelegatorsDelegatorAddrRewardsValidatorAddrGet(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
     /**
      * Withdraw a delegator\'s delegation reward from a single validator
      * @summary Withdraw a delegation reward
@@ -11236,7 +11236,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost(delegatorAddr: string, validatorAddr: string, withdrawRequestBody?: InlineObject13 | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost(delegatorAddr: string, validatorAddr: string, withdrawRequestBody?: InlineObject13, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      * Get the delegations\' rewards withdrawal address. This is the address in which the user will receive the reward funds
      * @summary Get the rewards withdrawal address
@@ -11245,7 +11245,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrWithdrawAddressGet(delegatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<string>>;
+    distributionDelegatorsDelegatorAddrWithdrawAddressGet(delegatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
     /**
      * Replace the delegations\' rewards withdrawal address for a new one.
      * @summary Replace the rewards withdrawal address
@@ -11255,7 +11255,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrWithdrawAddressPost(delegatorAddr: string, withdrawRequestBody?: InlineObject14 | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    distributionDelegatorsDelegatorAddrWithdrawAddressPost(delegatorAddr: string, withdrawRequestBody?: InlineObject14, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      *
      * @summary Fee distribution parameters
@@ -11263,7 +11263,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionParametersGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<object>>;
+    distributionParametersGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>>;
     /**
      * Query the distribution information of a single validator
      * @summary Validator distribution information
@@ -11272,7 +11272,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionValidatorsValidatorAddrGet(validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20024>>;
+    distributionValidatorsValidatorAddrGet(validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20024>>;
     /**
      *
      * @summary Fee distribution outstanding rewards of a single validator
@@ -11281,7 +11281,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionValidatorsValidatorAddrOutstandingRewardsGet(validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
+    distributionValidatorsValidatorAddrOutstandingRewardsGet(validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
     /**
      * Query the commission and self-delegation rewards of validator.
      * @summary Commission and self-delegation rewards of a single validator
@@ -11290,7 +11290,7 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionValidatorsValidatorAddrRewardsGet(validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
+    distributionValidatorsValidatorAddrRewardsGet(validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse2004TxFeeAmount>>>;
     /**
      * Withdraw the validator\'s self-delegation and commissions rewards
      * @summary Withdraw the validator\'s rewards
@@ -11300,13 +11300,13 @@ export declare const DistributionApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionValidatorsValidatorAddrRewardsPost(validatorAddr: string, withdrawRequestBody?: InlineObject15 | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    distributionValidatorsValidatorAddrRewardsPost(validatorAddr: string, withdrawRequestBody?: InlineObject15, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
 };
 /**
  * DistributionApi - factory interface
  * @export
  */
-export declare const DistributionApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const DistributionApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Community pool parameters
@@ -11333,7 +11333,7 @@ export declare const DistributionApiFactory: (configuration?: Configuration | un
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrRewardsPost(delegatorAddr: string, withdrawRequestBody?: InlineObject12 | undefined, options?: any): AxiosPromise<InlineResponse2004Tx>;
+    distributionDelegatorsDelegatorAddrRewardsPost(delegatorAddr: string, withdrawRequestBody?: InlineObject12, options?: any): AxiosPromise<InlineResponse2004Tx>;
     /**
      * Query a single delegation reward by a delegator
      * @summary Query a delegation reward
@@ -11354,7 +11354,7 @@ export declare const DistributionApiFactory: (configuration?: Configuration | un
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost(delegatorAddr: string, validatorAddr: string, withdrawRequestBody?: InlineObject13 | undefined, options?: any): AxiosPromise<InlineResponse2004Tx>;
+    distributionDelegatorsDelegatorAddrRewardsValidatorAddrPost(delegatorAddr: string, validatorAddr: string, withdrawRequestBody?: InlineObject13, options?: any): AxiosPromise<InlineResponse2004Tx>;
     /**
      * Get the delegations\' rewards withdrawal address. This is the address in which the user will receive the reward funds
      * @summary Get the rewards withdrawal address
@@ -11373,7 +11373,7 @@ export declare const DistributionApiFactory: (configuration?: Configuration | un
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionDelegatorsDelegatorAddrWithdrawAddressPost(delegatorAddr: string, withdrawRequestBody?: InlineObject14 | undefined, options?: any): AxiosPromise<InlineResponse2004Tx>;
+    distributionDelegatorsDelegatorAddrWithdrawAddressPost(delegatorAddr: string, withdrawRequestBody?: InlineObject14, options?: any): AxiosPromise<InlineResponse2004Tx>;
     /**
      *
      * @summary Fee distribution parameters
@@ -11418,7 +11418,7 @@ export declare const DistributionApiFactory: (configuration?: Configuration | un
      * @deprecated
      * @throws {RequiredError}
      */
-    distributionValidatorsValidatorAddrRewardsPost(validatorAddr: string, withdrawRequestBody?: InlineObject15 | undefined, options?: any): AxiosPromise<InlineResponse2004Tx>;
+    distributionValidatorsValidatorAddrRewardsPost(validatorAddr: string, withdrawRequestBody?: InlineObject15, options?: any): AxiosPromise<InlineResponse2004Tx>;
 };
 /**
  * DistributionApi - object-oriented interface
@@ -11556,7 +11556,7 @@ export declare class DistributionApi extends BaseAPI {
  * GaiaRESTApi - axios parameter creator
  * @export
  */
-export declare const GaiaRESTApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const GaiaRESTApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      * Information about the connected node
      * @summary The properties of the connected node
@@ -11569,20 +11569,20 @@ export declare const GaiaRESTApiAxiosParamCreator: (configuration?: Configuratio
  * GaiaRESTApi - functional programming interface
  * @export
  */
-export declare const GaiaRESTApiFp: (configuration?: Configuration | undefined) => {
+export declare const GaiaRESTApiFp: (configuration?: Configuration) => {
     /**
      * Information about the connected node
      * @summary The properties of the connected node
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    nodeInfoGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse200>>;
+    nodeInfoGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse200>>;
 };
 /**
  * GaiaRESTApi - factory interface
  * @export
  */
-export declare const GaiaRESTApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const GaiaRESTApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      * Information about the connected node
      * @summary The properties of the connected node
@@ -11611,7 +11611,7 @@ export declare class GaiaRESTApi extends BaseAPI {
  * GovernanceApi - axios parameter creator
  * @export
  */
-export declare const GovernanceApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const GovernanceApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      * Query governance deposit parameters. The max_deposit_period units are in nanoseconds.
      * @summary Query governance deposit parameters
@@ -11646,7 +11646,7 @@ export declare const GovernanceApiAxiosParamCreator: (configuration?: Configurat
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsGet: (voter?: string | undefined, depositor?: string | undefined, status?: string | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    govProposalsGet: (voter?: string, depositor?: string, status?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      * Generate a parameter change proposal transaction
      * @summary Generate a parameter change proposal transaction
@@ -11755,7 +11755,7 @@ export declare const GovernanceApiAxiosParamCreator: (configuration?: Configurat
  * GovernanceApi - functional programming interface
  * @export
  */
-export declare const GovernanceApiFp: (configuration?: Configuration | undefined) => {
+export declare const GovernanceApiFp: (configuration?: Configuration) => {
     /**
      * Query governance deposit parameters. The max_deposit_period units are in nanoseconds.
      * @summary Query governance deposit parameters
@@ -11763,7 +11763,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govParametersDepositGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20022>>;
+    govParametersDepositGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20022>>;
     /**
      * Query governance tally parameters
      * @summary Query governance tally parameters
@@ -11771,7 +11771,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govParametersTallyingGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<object>>;
+    govParametersTallyingGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>>;
     /**
      * Query governance voting parameters. The voting_period units are in nanoseconds.
      * @summary Query governance voting parameters
@@ -11779,7 +11779,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govParametersVotingGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<object>>;
+    govParametersVotingGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>>;
     /**
      * Query proposals information with parameters
      * @summary Query proposals
@@ -11790,7 +11790,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsGet(voter?: string | undefined, depositor?: string | undefined, status?: string | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20018>>>;
+    govProposalsGet(voter?: string, depositor?: string, status?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20018>>>;
     /**
      * Generate a parameter change proposal transaction
      * @summary Generate a parameter change proposal transaction
@@ -11799,7 +11799,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsParamChangePost(postProposalBody: InlineObject9, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    govProposalsParamChangePost(postProposalBody: InlineObject9, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      * Send transaction to submit a proposal
      * @summary Submit a proposal
@@ -11808,7 +11808,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsPost(postProposalBody: InlineObject8, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    govProposalsPost(postProposalBody: InlineObject8, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      * Query deposit by proposalId and depositor address
      * @summary Query deposit
@@ -11818,7 +11818,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdDepositsDepositorGet(proposalId: string, depositor: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20020>>;
+    govProposalsProposalIdDepositsDepositorGet(proposalId: string, depositor: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20020>>;
     /**
      * Query deposits by proposalId
      * @summary Query deposits
@@ -11827,7 +11827,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdDepositsGet(proposalId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20020>>>;
+    govProposalsProposalIdDepositsGet(proposalId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20020>>>;
     /**
      * Send transaction to deposit tokens to a proposal
      * @summary Deposit tokens to a proposal
@@ -11837,7 +11837,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdDepositsPost(proposalId: string, postDepositBody: InlineObject10, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    govProposalsProposalIdDepositsPost(proposalId: string, postDepositBody: InlineObject10, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      * Query a proposal by id
      * @summary Query a proposal
@@ -11846,7 +11846,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdGet(proposalId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20018>>;
+    govProposalsProposalIdGet(proposalId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20018>>;
     /**
      * Query for the proposer for a proposal
      * @summary Query proposer
@@ -11855,7 +11855,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdProposerGet(proposalId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20019>>;
+    govProposalsProposalIdProposerGet(proposalId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20019>>;
     /**
      * Gets a proposal\'s tally result at the current time. If the proposal is pending deposits (i.e status \'DepositPeriod\') it returns an empty tally result.
      * @summary Get a proposal\'s tally result at the current time
@@ -11864,7 +11864,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdTallyGet(proposalId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<GovProposalsFinalTallyResult>>;
+    govProposalsProposalIdTallyGet(proposalId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GovProposalsFinalTallyResult>>;
     /**
      * Query voters information by proposalId
      * @summary Query voters
@@ -11873,7 +11873,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdVotesGet(proposalId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20021>>>;
+    govProposalsProposalIdVotesGet(proposalId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20021>>>;
     /**
      * Send transaction to vote a proposal
      * @summary Vote a proposal
@@ -11883,7 +11883,7 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdVotesPost(proposalId: string, postVoteBody: InlineObject11, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    govProposalsProposalIdVotesPost(proposalId: string, postVoteBody: InlineObject11, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      * Query vote information by proposal Id and voter address
      * @summary Query vote
@@ -11893,13 +11893,13 @@ export declare const GovernanceApiFp: (configuration?: Configuration | undefined
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsProposalIdVotesVoterGet(proposalId: string, voter: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20021>>;
+    govProposalsProposalIdVotesVoterGet(proposalId: string, voter: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20021>>;
 };
 /**
  * GovernanceApi - factory interface
  * @export
  */
-export declare const GovernanceApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const GovernanceApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      * Query governance deposit parameters. The max_deposit_period units are in nanoseconds.
      * @summary Query governance deposit parameters
@@ -11934,7 +11934,7 @@ export declare const GovernanceApiFactory: (configuration?: Configuration | unde
      * @deprecated
      * @throws {RequiredError}
      */
-    govProposalsGet(voter?: string | undefined, depositor?: string | undefined, status?: string | undefined, options?: any): AxiosPromise<Array<InlineResponse20018>>;
+    govProposalsGet(voter?: string, depositor?: string, status?: string, options?: any): AxiosPromise<Array<InlineResponse20018>>;
     /**
      * Generate a parameter change proposal transaction
      * @summary Generate a parameter change proposal transaction
@@ -12204,7 +12204,7 @@ export declare class GovernanceApi extends BaseAPI {
  * MintApi - axios parameter creator
  * @export
  */
-export declare const MintApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const MintApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Current minting annual provisions value
@@ -12234,7 +12234,7 @@ export declare const MintApiAxiosParamCreator: (configuration?: Configuration | 
  * MintApi - functional programming interface
  * @export
  */
-export declare const MintApiFp: (configuration?: Configuration | undefined) => {
+export declare const MintApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Current minting annual provisions value
@@ -12242,7 +12242,7 @@ export declare const MintApiFp: (configuration?: Configuration | undefined) => {
      * @deprecated
      * @throws {RequiredError}
      */
-    mintingAnnualProvisionsGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<string>>;
+    mintingAnnualProvisionsGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
     /**
      *
      * @summary Current minting inflation value
@@ -12250,7 +12250,7 @@ export declare const MintApiFp: (configuration?: Configuration | undefined) => {
      * @deprecated
      * @throws {RequiredError}
      */
-    mintingInflationGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<string>>;
+    mintingInflationGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
     /**
      *
      * @summary Minting module parameters
@@ -12258,13 +12258,13 @@ export declare const MintApiFp: (configuration?: Configuration | undefined) => {
      * @deprecated
      * @throws {RequiredError}
      */
-    mintingParametersGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<object>>;
+    mintingParametersGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>>;
 };
 /**
  * MintApi - factory interface
  * @export
  */
-export declare const MintApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const MintApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Current minting annual provisions value
@@ -12329,7 +12329,7 @@ export declare class MintApi extends BaseAPI {
  * QueryApi - axios parameter creator
  * @export
  */
-export declare const QueryApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const QueryApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Account returns account details based on address.
@@ -12349,7 +12349,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    accounts: (paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    accounts: (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary AllBalances queries the balance of all coins for a single account.
@@ -12362,7 +12362,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allBalances: (address: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    allBalances: (address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary AllEvidence queries all evidence.
@@ -12374,7 +12374,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allEvidence: (paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    allEvidence: (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Allowance returns fee granted to the grantee by the granter.
@@ -12396,7 +12396,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allowances: (grantee: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    allowances: (grantee: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary AnnualProvisions current minting annual provisions value.
@@ -12487,7 +12487,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorDelegations: (delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    delegatorDelegations: (delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary DelegatorUnbondingDelegations queries all unbonding delegations of a given delegator address.
@@ -12500,7 +12500,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorUnbondingDelegations: (delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    delegatorUnbondingDelegations: (delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary DelegatorValidator queries validator info for given delegator validator pair.
@@ -12546,7 +12546,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    denomOwners: (denom: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    denomOwners: (denom: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary DenomsMetadata queries the client metadata for all registered coin denominations.
@@ -12558,7 +12558,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    denomsMetadata: (paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    denomsMetadata: (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Deposit queries single deposit information based proposalID, depositAddr.
@@ -12580,7 +12580,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deposits: (proposalId: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    deposits: (proposalId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Params queries params of the distribution module.
@@ -12618,7 +12618,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    grants: (granter?: string | undefined, grantee?: string | undefined, msgTypeUrl?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    grants: (granter?: string, grantee?: string, msgTypeUrl?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary HistoricalInfo queries the historical info for given height.
@@ -12648,7 +12648,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    moduleVersions: (moduleName?: string | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    moduleVersions: (moduleName?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Params queries a specific parameter of a module, given its subspace and key.
@@ -12657,7 +12657,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    params: (subspace?: string | undefined, key?: string | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    params: (subspace?: string, key?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Pool queries the pool info.
@@ -12687,7 +12687,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    proposals: (proposalStatus?: "PROPOSAL_STATUS_UNSPECIFIED" | "PROPOSAL_STATUS_DEPOSIT_PERIOD" | "PROPOSAL_STATUS_VOTING_PERIOD" | "PROPOSAL_STATUS_PASSED" | "PROPOSAL_STATUS_REJECTED" | "PROPOSAL_STATUS_FAILED" | undefined, voter?: string | undefined, depositor?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    proposals: (proposalStatus?: 'PROPOSAL_STATUS_UNSPECIFIED' | 'PROPOSAL_STATUS_DEPOSIT_PERIOD' | 'PROPOSAL_STATUS_VOTING_PERIOD' | 'PROPOSAL_STATUS_PASSED' | 'PROPOSAL_STATUS_REJECTED' | 'PROPOSAL_STATUS_FAILED', voter?: string, depositor?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Redelegations queries redelegations of given address.
@@ -12702,7 +12702,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    redelegations: (delegatorAddr: string, srcValidatorAddr?: string | undefined, dstValidatorAddr?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    redelegations: (delegatorAddr: string, srcValidatorAddr?: string, dstValidatorAddr?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary SigningInfo queries the signing info of given cons address
@@ -12722,7 +12722,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    signingInfos: (paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    signingInfos: (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Params queries the parameters of slashing module
@@ -12742,7 +12742,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorValidators: (delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    stakingDelegatorValidators: (delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Parameters queries the staking parameters.
@@ -12777,7 +12777,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    totalSupply: (paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    totalSupply: (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary UnbondingDelegation queries unbonding info for given validator delegator pair.
@@ -12823,7 +12823,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorDelegations: (validatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    validatorDelegations: (validatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary ValidatorOutstandingRewards queries rewards of a validator address.
@@ -12846,7 +12846,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorSlashes: (validatorAddress: string, startingHeight?: string | undefined, endingHeight?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    validatorSlashes: (validatorAddress: string, startingHeight?: string, endingHeight?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary ValidatorUnbondingDelegations queries unbonding delegations of a validator.
@@ -12859,7 +12859,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorUnbondingDelegations: (validatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    validatorUnbondingDelegations: (validatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Validators queries all validators that match the given status.
@@ -12872,7 +12872,7 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validators: (status?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    validators: (status?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Vote queries voted information based on proposalID, voterAddr.
@@ -12894,13 +12894,13 @@ export declare const QueryApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    votes: (proposalId: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    votes: (proposalId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
 };
 /**
  * QueryApi - functional programming interface
  * @export
  */
-export declare const QueryApiFp: (configuration?: Configuration | undefined) => {
+export declare const QueryApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Account returns account details based on address.
@@ -12908,7 +12908,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    account(address: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20026>>;
+    account(address: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20026>>;
     /**
      *
      * @summary Accounts returns all the existing accounts
@@ -12920,7 +12920,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    accounts(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20025>>;
+    accounts(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20025>>;
     /**
      *
      * @summary AllBalances queries the balance of all coins for a single account.
@@ -12933,7 +12933,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allBalances(address: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20028>>;
+    allBalances(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20028>>;
     /**
      *
      * @summary AllEvidence queries all evidence.
@@ -12945,7 +12945,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allEvidence(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20049>>;
+    allEvidence(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20049>>;
     /**
      *
      * @summary Allowance returns fee granted to the grantee by the granter.
@@ -12954,7 +12954,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allowance(granter: string, grantee: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20081>>;
+    allowance(granter: string, grantee: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20081>>;
     /**
      *
      * @summary Allowances returns all the grants for address.
@@ -12967,14 +12967,14 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allowances(grantee: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20082>>;
+    allowances(grantee: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20082>>;
     /**
      *
      * @summary AnnualProvisions current minting annual provisions value.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    annualProvisions(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20059>>;
+    annualProvisions(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20059>>;
     /**
      *
      * @summary AppliedPlan queries a previously applied upgrade plan by its name.
@@ -12982,14 +12982,14 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    appliedPlan(name: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20076>>;
+    appliedPlan(name: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20076>>;
     /**
      *
      * @summary Params queries all parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    authParams(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20027>>;
+    authParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20027>>;
     /**
      *
      * @summary Balance queries the balance of a single coin for a single account.
@@ -12998,28 +12998,28 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    balance(address: string, denom: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20029>>;
+    balance(address: string, denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20029>>;
     /**
      *
      * @summary Params queries the parameters of x/bank module.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    bankParams(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20033>>;
+    bankParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20033>>;
     /**
      *
      * @summary CommunityPool queries the community pool coins.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    communityPool(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20041>>;
+    communityPool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20041>>;
     /**
      *
      * @summary CurrentPlan queries the current upgrade plan.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    currentPlan(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20077>>;
+    currentPlan(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20077>>;
     /**
      *
      * @summary Delegation queries delegate info for given validator delegator pair.
@@ -13028,7 +13028,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegation(validatorAddr: string, delegatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20071>>;
+    delegation(validatorAddr: string, delegatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20071>>;
     /**
      *
      * @summary DelegationRewards queries the total rewards accrued by a delegation.
@@ -13037,7 +13037,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegationRewards(delegatorAddress: string, validatorAddress: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20043>>;
+    delegationRewards(delegatorAddress: string, validatorAddress: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20043>>;
     /**
      *
      * @summary DelegationTotalRewards queries the total rewards accrued by a each validator.
@@ -13045,7 +13045,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegationTotalRewards(delegatorAddress: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20042>>;
+    delegationTotalRewards(delegatorAddress: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20042>>;
     /**
      *
      * @summary DelegatorDelegations queries all delegations of a given delegator address.
@@ -13058,7 +13058,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorDelegations(delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20063>>;
+    delegatorDelegations(delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20063>>;
     /**
      *
      * @summary DelegatorUnbondingDelegations queries all unbonding delegations of a given delegator address.
@@ -13071,7 +13071,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorUnbondingDelegations(delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20065>>;
+    delegatorUnbondingDelegations(delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20065>>;
     /**
      *
      * @summary DelegatorValidator queries validator info for given delegator validator pair.
@@ -13080,7 +13080,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorValidator(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20067>>;
+    delegatorValidator(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20067>>;
     /**
      *
      * @summary DelegatorValidators queries the validators of a delegator.
@@ -13088,7 +13088,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorValidators(delegatorAddress: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20044>>;
+    delegatorValidators(delegatorAddress: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20044>>;
     /**
      *
      * @summary DelegatorWithdrawAddress queries withdraw address of a delegator.
@@ -13096,7 +13096,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorWithdrawAddress(delegatorAddress: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20045>>;
+    delegatorWithdrawAddress(delegatorAddress: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20045>>;
     /**
      *
      * @summary DenomsMetadata queries the client metadata of a given coin denomination.
@@ -13104,7 +13104,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    denomMetadata(denom: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20032>>;
+    denomMetadata(denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20032>>;
     /**
      *
      * @summary DenomOwners queries for all account addresses that own a particular token denomination.
@@ -13117,7 +13117,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    denomOwners(denom: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20030>>;
+    denomOwners(denom: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20030>>;
     /**
      *
      * @summary DenomsMetadata queries the client metadata for all registered coin denominations.
@@ -13129,7 +13129,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    denomsMetadata(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20031>>;
+    denomsMetadata(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20031>>;
     /**
      *
      * @summary Deposit queries single deposit information based proposalID, depositAddr.
@@ -13138,7 +13138,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deposit(proposalId: string, depositor: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20055>>;
+    deposit(proposalId: string, depositor: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20055>>;
     /**
      *
      * @summary Deposits queries all deposits of a single proposal.
@@ -13151,14 +13151,14 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deposits(proposalId: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20054>>;
+    deposits(proposalId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20054>>;
     /**
      *
      * @summary Params queries params of the distribution module.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    distributionParams(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20046>>;
+    distributionParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20046>>;
     /**
      *
      * @summary Evidence queries evidence based on evidence hash.
@@ -13166,7 +13166,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    evidence(evidenceHash: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20050>>;
+    evidence(evidenceHash: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20050>>;
     /**
      *
      * @summary Params queries all parameters of the gov module.
@@ -13174,7 +13174,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    govParams(paramsType: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20051>>;
+    govParams(paramsType: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20051>>;
     /**
      *
      * @summary Returns list of `Authorization`, granted to the grantee by the granter.
@@ -13189,7 +13189,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    grants(granter?: string | undefined, grantee?: string | undefined, msgTypeUrl?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20080>>;
+    grants(granter?: string, grantee?: string, msgTypeUrl?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20080>>;
     /**
      *
      * @summary HistoricalInfo queries the historical info for given height.
@@ -13197,21 +13197,21 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    historicalInfo(height: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20068>>;
+    historicalInfo(height: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20068>>;
     /**
      *
      * @summary Inflation returns the current minting inflation value.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    inflation(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20060>>;
+    inflation(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20060>>;
     /**
      *
      * @summary Params returns the total set of minting parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    mintParams(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20061>>;
+    mintParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20061>>;
     /**
      *
      * @summary ModuleVersions queries the list of module versions from state.
@@ -13219,7 +13219,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    moduleVersions(moduleName?: string | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20078>>;
+    moduleVersions(moduleName?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20078>>;
     /**
      *
      * @summary Params queries a specific parameter of a module, given its subspace and key.
@@ -13228,14 +13228,14 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    params(subspace?: string | undefined, key?: string | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20062>>;
+    params(subspace?: string, key?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20062>>;
     /**
      *
      * @summary Pool queries the pool info.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    pool(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20070>>;
+    pool(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20070>>;
     /**
      *
      * @summary Proposal queries proposal details based on ProposalID.
@@ -13243,7 +13243,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    proposal(proposalId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20053>>;
+    proposal(proposalId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20053>>;
     /**
      *
      * @summary Proposals queries all proposals based on given status.
@@ -13258,7 +13258,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    proposals(proposalStatus?: "PROPOSAL_STATUS_UNSPECIFIED" | "PROPOSAL_STATUS_DEPOSIT_PERIOD" | "PROPOSAL_STATUS_VOTING_PERIOD" | "PROPOSAL_STATUS_PASSED" | "PROPOSAL_STATUS_REJECTED" | "PROPOSAL_STATUS_FAILED" | undefined, voter?: string | undefined, depositor?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20052>>;
+    proposals(proposalStatus?: 'PROPOSAL_STATUS_UNSPECIFIED' | 'PROPOSAL_STATUS_DEPOSIT_PERIOD' | 'PROPOSAL_STATUS_VOTING_PERIOD' | 'PROPOSAL_STATUS_PASSED' | 'PROPOSAL_STATUS_REJECTED' | 'PROPOSAL_STATUS_FAILED', voter?: string, depositor?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20052>>;
     /**
      *
      * @summary Redelegations queries redelegations of given address.
@@ -13273,7 +13273,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    redelegations(delegatorAddr: string, srcValidatorAddr?: string | undefined, dstValidatorAddr?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20064>>;
+    redelegations(delegatorAddr: string, srcValidatorAddr?: string, dstValidatorAddr?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20064>>;
     /**
      *
      * @summary SigningInfo queries the signing info of given cons address
@@ -13281,7 +13281,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    signingInfo(consAddress: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod>>;
+    signingInfo(consAddress: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod>>;
     /**
      *
      * @summary SigningInfos queries signing info of all validators
@@ -13293,14 +13293,14 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    signingInfos(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod>>;
+    signingInfos(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod>>;
     /**
      *
      * @summary Params queries the parameters of slashing module
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    slashingParams(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod>>;
+    slashingParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod>>;
     /**
      *
      * @summary DelegatorValidators queries all validators info for given delegator address.
@@ -13313,14 +13313,14 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorValidators(delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20066>>;
+    stakingDelegatorValidators(delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20066>>;
     /**
      *
      * @summary Parameters queries the staking parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingParams(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20069>>;
+    stakingParams(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20069>>;
     /**
      *
      * @summary SupplyOf queries the supply of a single coin.
@@ -13328,7 +13328,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    supplyOf(denom: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20034>>;
+    supplyOf(denom: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20034>>;
     /**
      *
      * @summary TallyResult queries the tally of a proposal vote.
@@ -13336,7 +13336,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    tallyResult(proposalId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20056>>;
+    tallyResult(proposalId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20056>>;
     /**
      *
      * @summary TotalSupply queries the total supply of all coins.
@@ -13348,7 +13348,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    totalSupply(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod>>;
+    totalSupply(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod>>;
     /**
      *
      * @summary UnbondingDelegation queries unbonding info for given validator delegator pair.
@@ -13357,7 +13357,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    unbondingDelegation(validatorAddr: string, delegatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20072>>;
+    unbondingDelegation(validatorAddr: string, delegatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20072>>;
     /**
      *
      * @summary UpgradedConsensusState queries the consensus state that will serve as a trusted kernel for the next version of this chain. It will only be stored at the last height of this chain. UpgradedConsensusState RPC not supported with legacy querier
@@ -13365,7 +13365,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    upgradedConsensusState(lastHeight: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20079>>;
+    upgradedConsensusState(lastHeight: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20079>>;
     /**
      *
      * @summary Validator queries validator info for given validator address.
@@ -13373,7 +13373,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validator(validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod>>;
+    validator(validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod>>;
     /**
      *
      * @summary ValidatorCommission queries accumulated commission for a validator.
@@ -13381,7 +13381,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorCommission(validatorAddress: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod>>;
+    validatorCommission(validatorAddress: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QueryValidatorCommissionResponseIsTheResponseTypeForTheQueryValidatorCommissionRPCMethod>>;
     /**
      *
      * @summary ValidatorDelegations queries delegate info for given validator.
@@ -13394,7 +13394,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorDelegations(validatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod>>;
+    validatorDelegations(validatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod>>;
     /**
      *
      * @summary ValidatorOutstandingRewards queries rewards of a validator address.
@@ -13402,7 +13402,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorOutstandingRewards(validatorAddress: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20047>>;
+    validatorOutstandingRewards(validatorAddress: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20047>>;
     /**
      *
      * @summary ValidatorSlashes queries slash events of a validator.
@@ -13417,7 +13417,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorSlashes(validatorAddress: string, startingHeight?: string | undefined, endingHeight?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20048>>;
+    validatorSlashes(validatorAddress: string, startingHeight?: string, endingHeight?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20048>>;
     /**
      *
      * @summary ValidatorUnbondingDelegations queries unbonding delegations of a validator.
@@ -13430,7 +13430,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorUnbondingDelegations(validatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20073>>;
+    validatorUnbondingDelegations(validatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20073>>;
     /**
      *
      * @summary Validators queries all validators that match the given status.
@@ -13443,7 +13443,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validators(status?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod>>;
+    validators(status?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod>>;
     /**
      *
      * @summary Vote queries voted information based on proposalID, voterAddr.
@@ -13452,7 +13452,7 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    vote(proposalId: string, voter: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20058>>;
+    vote(proposalId: string, voter: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20058>>;
     /**
      *
      * @summary Votes queries votes of a given proposal.
@@ -13465,13 +13465,13 @@ export declare const QueryApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    votes(proposalId: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20057>>;
+    votes(proposalId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20057>>;
 };
 /**
  * QueryApi - factory interface
  * @export
  */
-export declare const QueryApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const QueryApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Account returns account details based on address.
@@ -13491,7 +13491,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    accounts(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20025>;
+    accounts(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20025>;
     /**
      *
      * @summary AllBalances queries the balance of all coins for a single account.
@@ -13504,7 +13504,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allBalances(address: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20028>;
+    allBalances(address: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20028>;
     /**
      *
      * @summary AllEvidence queries all evidence.
@@ -13516,7 +13516,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allEvidence(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20049>;
+    allEvidence(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20049>;
     /**
      *
      * @summary Allowance returns fee granted to the grantee by the granter.
@@ -13538,7 +13538,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    allowances(grantee: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20082>;
+    allowances(grantee: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20082>;
     /**
      *
      * @summary AnnualProvisions current minting annual provisions value.
@@ -13629,7 +13629,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorDelegations(delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20063>;
+    delegatorDelegations(delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20063>;
     /**
      *
      * @summary DelegatorUnbondingDelegations queries all unbonding delegations of a given delegator address.
@@ -13642,7 +13642,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    delegatorUnbondingDelegations(delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20065>;
+    delegatorUnbondingDelegations(delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20065>;
     /**
      *
      * @summary DelegatorValidator queries validator info for given delegator validator pair.
@@ -13688,7 +13688,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    denomOwners(denom: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20030>;
+    denomOwners(denom: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20030>;
     /**
      *
      * @summary DenomsMetadata queries the client metadata for all registered coin denominations.
@@ -13700,7 +13700,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    denomsMetadata(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20031>;
+    denomsMetadata(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20031>;
     /**
      *
      * @summary Deposit queries single deposit information based proposalID, depositAddr.
@@ -13722,7 +13722,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deposits(proposalId: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20054>;
+    deposits(proposalId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20054>;
     /**
      *
      * @summary Params queries params of the distribution module.
@@ -13760,7 +13760,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    grants(granter?: string | undefined, grantee?: string | undefined, msgTypeUrl?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20080>;
+    grants(granter?: string, grantee?: string, msgTypeUrl?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20080>;
     /**
      *
      * @summary HistoricalInfo queries the historical info for given height.
@@ -13790,7 +13790,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    moduleVersions(moduleName?: string | undefined, options?: any): AxiosPromise<InlineResponse20078>;
+    moduleVersions(moduleName?: string, options?: any): AxiosPromise<InlineResponse20078>;
     /**
      *
      * @summary Params queries a specific parameter of a module, given its subspace and key.
@@ -13799,7 +13799,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    params(subspace?: string | undefined, key?: string | undefined, options?: any): AxiosPromise<InlineResponse20062>;
+    params(subspace?: string, key?: string, options?: any): AxiosPromise<InlineResponse20062>;
     /**
      *
      * @summary Pool queries the pool info.
@@ -13829,7 +13829,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    proposals(proposalStatus?: "PROPOSAL_STATUS_UNSPECIFIED" | "PROPOSAL_STATUS_DEPOSIT_PERIOD" | "PROPOSAL_STATUS_VOTING_PERIOD" | "PROPOSAL_STATUS_PASSED" | "PROPOSAL_STATUS_REJECTED" | "PROPOSAL_STATUS_FAILED" | undefined, voter?: string | undefined, depositor?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20052>;
+    proposals(proposalStatus?: 'PROPOSAL_STATUS_UNSPECIFIED' | 'PROPOSAL_STATUS_DEPOSIT_PERIOD' | 'PROPOSAL_STATUS_VOTING_PERIOD' | 'PROPOSAL_STATUS_PASSED' | 'PROPOSAL_STATUS_REJECTED' | 'PROPOSAL_STATUS_FAILED', voter?: string, depositor?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20052>;
     /**
      *
      * @summary Redelegations queries redelegations of given address.
@@ -13844,7 +13844,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    redelegations(delegatorAddr: string, srcValidatorAddr?: string | undefined, dstValidatorAddr?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20064>;
+    redelegations(delegatorAddr: string, srcValidatorAddr?: string, dstValidatorAddr?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20064>;
     /**
      *
      * @summary SigningInfo queries the signing info of given cons address
@@ -13864,7 +13864,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    signingInfos(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod>;
+    signingInfos(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod>;
     /**
      *
      * @summary Params queries the parameters of slashing module
@@ -13884,7 +13884,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorValidators(delegatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20066>;
+    stakingDelegatorValidators(delegatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20066>;
     /**
      *
      * @summary Parameters queries the staking parameters.
@@ -13919,7 +13919,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    totalSupply(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod>;
+    totalSupply(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<QueryTotalSupplyResponseIsTheResponseTypeForTheQueryTotalSupplyRPCMethod>;
     /**
      *
      * @summary UnbondingDelegation queries unbonding info for given validator delegator pair.
@@ -13965,7 +13965,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorDelegations(validatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod>;
+    validatorDelegations(validatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<QueryValidatorDelegationsResponseIsResponseTypeForTheQueryValidatorDelegationsRPCMethod>;
     /**
      *
      * @summary ValidatorOutstandingRewards queries rewards of a validator address.
@@ -13988,7 +13988,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorSlashes(validatorAddress: string, startingHeight?: string | undefined, endingHeight?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20048>;
+    validatorSlashes(validatorAddress: string, startingHeight?: string, endingHeight?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20048>;
     /**
      *
      * @summary ValidatorUnbondingDelegations queries unbonding delegations of a validator.
@@ -14001,7 +14001,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorUnbondingDelegations(validatorAddr: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20073>;
+    validatorUnbondingDelegations(validatorAddr: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20073>;
     /**
      *
      * @summary Validators queries all validators that match the given status.
@@ -14014,7 +14014,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validators(status?: string | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod>;
+    validators(status?: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod>;
     /**
      *
      * @summary Vote queries voted information based on proposalID, voterAddr.
@@ -14036,7 +14036,7 @@ export declare const QueryApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    votes(proposalId: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20057>;
+    votes(proposalId: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20057>;
 };
 /**
  * QueryApi - object-oriented interface
@@ -14673,7 +14673,7 @@ export declare class QueryApi extends BaseAPI {
  * ServiceApi - axios parameter creator
  * @export
  */
-export declare const ServiceApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ServiceApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary BroadcastTx broadcast transaction.
@@ -14708,7 +14708,7 @@ export declare const ServiceApiAxiosParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getLatestValidatorSet: (paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getLatestValidatorSet: (paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary GetNodeInfo queries the current node info.
@@ -14744,7 +14744,7 @@ export declare const ServiceApiAxiosParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTxsEvent: (events?: string[] | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, orderBy?: "ORDER_BY_UNSPECIFIED" | "ORDER_BY_ASC" | "ORDER_BY_DESC" | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getTxsEvent: (events?: Array<string>, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, orderBy?: 'ORDER_BY_UNSPECIFIED' | 'ORDER_BY_ASC' | 'ORDER_BY_DESC', options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary GetValidatorSetByHeight queries validator-set at a given height.
@@ -14757,7 +14757,7 @@ export declare const ServiceApiAxiosParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getValidatorSetByHeight: (height: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    getValidatorSetByHeight: (height: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Simulate simulates executing a transaction for estimating gas usage.
@@ -14771,7 +14771,7 @@ export declare const ServiceApiAxiosParamCreator: (configuration?: Configuration
  * ServiceApi - functional programming interface
  * @export
  */
-export declare const ServiceApiFp: (configuration?: Configuration | undefined) => {
+export declare const ServiceApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary BroadcastTx broadcast transaction.
@@ -14779,7 +14779,7 @@ export declare const ServiceApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    broadcastTx(body: InlineObject16, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20075>>;
+    broadcastTx(body: InlineObject16, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20075>>;
     /**
      *
      * @summary GetBlockByHeight queries block for given height.
@@ -14787,14 +14787,14 @@ export declare const ServiceApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getBlockByHeight(height: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20036>>;
+    getBlockByHeight(height: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20036>>;
     /**
      *
      * @summary GetLatestBlock returns the latest block.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getLatestBlock(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20035>>;
+    getLatestBlock(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20035>>;
     /**
      *
      * @summary GetLatestValidatorSet queries latest validator-set.
@@ -14806,21 +14806,21 @@ export declare const ServiceApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getLatestValidatorSet(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20039>>;
+    getLatestValidatorSet(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20039>>;
     /**
      *
      * @summary GetNodeInfo queries the current node info.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getNodeInfo(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20037>>;
+    getNodeInfo(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20037>>;
     /**
      *
      * @summary GetSyncing queries node syncing.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getSyncing(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20038>>;
+    getSyncing(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20038>>;
     /**
      *
      * @summary GetTx fetches a tx by hash.
@@ -14828,7 +14828,7 @@ export declare const ServiceApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTx(hash: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CosmosTxV1beta1GetTxResponse>>;
+    getTx(hash: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CosmosTxV1beta1GetTxResponse>>;
     /**
      *
      * @summary GetTxsEvent fetches txs by event.
@@ -14842,7 +14842,7 @@ export declare const ServiceApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTxsEvent(events?: string[] | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, orderBy?: "ORDER_BY_UNSPECIFIED" | "ORDER_BY_ASC" | "ORDER_BY_DESC" | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CosmosTxV1beta1GetTxsEventResponse>>;
+    getTxsEvent(events?: Array<string>, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, orderBy?: 'ORDER_BY_UNSPECIFIED' | 'ORDER_BY_ASC' | 'ORDER_BY_DESC', options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CosmosTxV1beta1GetTxsEventResponse>>;
     /**
      *
      * @summary GetValidatorSetByHeight queries validator-set at a given height.
@@ -14855,7 +14855,7 @@ export declare const ServiceApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getValidatorSetByHeight(height: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20040>>;
+    getValidatorSetByHeight(height: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20040>>;
     /**
      *
      * @summary Simulate simulates executing a transaction for estimating gas usage.
@@ -14863,13 +14863,13 @@ export declare const ServiceApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    simulate(body: CosmosTxV1beta1SimulateRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20074>>;
+    simulate(body: CosmosTxV1beta1SimulateRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20074>>;
 };
 /**
  * ServiceApi - factory interface
  * @export
  */
-export declare const ServiceApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const ServiceApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary BroadcastTx broadcast transaction.
@@ -14904,7 +14904,7 @@ export declare const ServiceApiFactory: (configuration?: Configuration | undefin
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getLatestValidatorSet(paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20039>;
+    getLatestValidatorSet(paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20039>;
     /**
      *
      * @summary GetNodeInfo queries the current node info.
@@ -14940,7 +14940,7 @@ export declare const ServiceApiFactory: (configuration?: Configuration | undefin
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getTxsEvent(events?: string[] | undefined, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, orderBy?: "ORDER_BY_UNSPECIFIED" | "ORDER_BY_ASC" | "ORDER_BY_DESC" | undefined, options?: any): AxiosPromise<CosmosTxV1beta1GetTxsEventResponse>;
+    getTxsEvent(events?: Array<string>, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, orderBy?: 'ORDER_BY_UNSPECIFIED' | 'ORDER_BY_ASC' | 'ORDER_BY_DESC', options?: any): AxiosPromise<CosmosTxV1beta1GetTxsEventResponse>;
     /**
      *
      * @summary GetValidatorSetByHeight queries validator-set at a given height.
@@ -14953,7 +14953,7 @@ export declare const ServiceApiFactory: (configuration?: Configuration | undefin
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getValidatorSetByHeight(height: string, paginationKey?: string | undefined, paginationOffset?: string | undefined, paginationLimit?: string | undefined, paginationCountTotal?: boolean | undefined, paginationReverse?: boolean | undefined, options?: any): AxiosPromise<InlineResponse20040>;
+    getValidatorSetByHeight(height: string, paginationKey?: string, paginationOffset?: string, paginationLimit?: string, paginationCountTotal?: boolean, paginationReverse?: boolean, options?: any): AxiosPromise<InlineResponse20040>;
     /**
      *
      * @summary Simulate simulates executing a transaction for estimating gas usage.
@@ -15077,7 +15077,7 @@ export declare class ServiceApi extends BaseAPI {
  * SlashingApi - axios parameter creator
  * @export
  */
-export declare const SlashingApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const SlashingApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Get the current slashing parameters
@@ -15111,7 +15111,7 @@ export declare const SlashingApiAxiosParamCreator: (configuration?: Configuratio
  * SlashingApi - functional programming interface
  * @export
  */
-export declare const SlashingApiFp: (configuration?: Configuration | undefined) => {
+export declare const SlashingApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Get the current slashing parameters
@@ -15119,7 +15119,7 @@ export declare const SlashingApiFp: (configuration?: Configuration | undefined) 
      * @deprecated
      * @throws {RequiredError}
      */
-    slashingParametersGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20017>>;
+    slashingParametersGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20017>>;
     /**
      * Get sign info of all validators
      * @summary Get sign info of given all validators
@@ -15129,7 +15129,7 @@ export declare const SlashingApiFp: (configuration?: Configuration | undefined) 
      * @deprecated
      * @throws {RequiredError}
      */
-    slashingSigningInfosGet(page: number, limit: number, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20016>>>;
+    slashingSigningInfosGet(page: number, limit: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20016>>>;
     /**
      * Send transaction to unjail a jailed validator
      * @summary Unjail a jailed validator
@@ -15139,13 +15139,13 @@ export declare const SlashingApiFp: (configuration?: Configuration | undefined) 
      * @deprecated
      * @throws {RequiredError}
      */
-    slashingValidatorsValidatorAddrUnjailPost(validatorAddr: string, unjailBody: InlineObject7, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    slashingValidatorsValidatorAddrUnjailPost(validatorAddr: string, unjailBody: InlineObject7, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
 };
 /**
  * SlashingApi - factory interface
  * @export
  */
-export declare const SlashingApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const SlashingApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Get the current slashing parameters
@@ -15218,7 +15218,7 @@ export declare class SlashingApi extends BaseAPI {
  * StakingApi - axios parameter creator
  * @export
  */
-export declare const StakingApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const StakingApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Get all delegations from a delegator
@@ -15236,7 +15236,7 @@ export declare const StakingApiAxiosParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrDelegationsPost: (delegatorAddr: string, delegation?: InlineObject4 | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    stakingDelegatorsDelegatorAddrDelegationsPost: (delegatorAddr: string, delegation?: InlineObject4, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Query the current delegation between a delegator and a validator
@@ -15256,7 +15256,7 @@ export declare const StakingApiAxiosParamCreator: (configuration?: Configuration
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrRedelegationsPost: (delegatorAddr: string, delegation?: InlineObject6 | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    stakingDelegatorsDelegatorAddrRedelegationsPost: (delegatorAddr: string, delegation?: InlineObject6, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Get all unbonding delegations from a delegator
@@ -15274,7 +15274,7 @@ export declare const StakingApiAxiosParamCreator: (configuration?: Configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrUnbondingDelegationsPost: (delegatorAddr: string, delegation?: InlineObject5 | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    stakingDelegatorsDelegatorAddrUnbondingDelegationsPost: (delegatorAddr: string, delegation?: InlineObject5, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Query all unbonding delegations between a delegator and a validator
@@ -15330,7 +15330,7 @@ export declare const StakingApiAxiosParamCreator: (configuration?: Configuration
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingRedelegationsGet: (delegator?: string | undefined, validatorFrom?: string | undefined, validatorTo?: string | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    stakingRedelegationsGet: (delegator?: string, validatorFrom?: string, validatorTo?: string, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Get all validator candidates. By default it returns only the bonded validators.
@@ -15341,7 +15341,7 @@ export declare const StakingApiAxiosParamCreator: (configuration?: Configuration
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingValidatorsGet: (status?: string | undefined, page?: number | undefined, limit?: number | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    stakingValidatorsGet: (status?: string, page?: number, limit?: number, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary Get all delegations from a validator
@@ -15374,7 +15374,7 @@ export declare const StakingApiAxiosParamCreator: (configuration?: Configuration
  * StakingApi - functional programming interface
  * @export
  */
-export declare const StakingApiFp: (configuration?: Configuration | undefined) => {
+export declare const StakingApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Get all delegations from a delegator
@@ -15383,7 +15383,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrDelegationsGet(delegatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20010>>>;
+    stakingDelegatorsDelegatorAddrDelegationsGet(delegatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20010>>>;
     /**
      *
      * @summary Submit delegation
@@ -15392,7 +15392,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrDelegationsPost(delegatorAddr: string, delegation?: InlineObject4 | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    stakingDelegatorsDelegatorAddrDelegationsPost(delegatorAddr: string, delegation?: InlineObject4, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      *
      * @summary Query the current delegation between a delegator and a validator
@@ -15402,7 +15402,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrDelegationsValidatorAddrGet(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20010>>;
+    stakingDelegatorsDelegatorAddrDelegationsValidatorAddrGet(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20010>>;
     /**
      *
      * @summary Submit a redelegation
@@ -15412,7 +15412,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrRedelegationsPost(delegatorAddr: string, delegation?: InlineObject6 | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    stakingDelegatorsDelegatorAddrRedelegationsPost(delegatorAddr: string, delegation?: InlineObject6, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      *
      * @summary Get all unbonding delegations from a delegator
@@ -15421,7 +15421,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrUnbondingDelegationsGet(delegatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20011>>>;
+    stakingDelegatorsDelegatorAddrUnbondingDelegationsGet(delegatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20011>>>;
     /**
      *
      * @summary Submit an unbonding delegation
@@ -15430,7 +15430,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrUnbondingDelegationsPost(delegatorAddr: string, delegation?: InlineObject5 | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    stakingDelegatorsDelegatorAddrUnbondingDelegationsPost(delegatorAddr: string, delegation?: InlineObject5, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      *
      * @summary Query all unbonding delegations between a delegator and a validator
@@ -15440,7 +15440,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrUnbondingDelegationsValidatorAddrGet(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20012>>;
+    stakingDelegatorsDelegatorAddrUnbondingDelegationsValidatorAddrGet(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20012>>;
     /**
      *
      * @summary Query all validators that a delegator is bonded to
@@ -15449,7 +15449,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrValidatorsGet(delegatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20013>>>;
+    stakingDelegatorsDelegatorAddrValidatorsGet(delegatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20013>>>;
     /**
      *
      * @summary Query a validator that a delegator is bonded to
@@ -15459,7 +15459,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrValidatorsValidatorAddrGet(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20013>>;
+    stakingDelegatorsDelegatorAddrValidatorsValidatorAddrGet(delegatorAddr: string, validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20013>>;
     /**
      *
      * @summary Get the current staking parameter values
@@ -15467,7 +15467,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingParametersGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20015>>;
+    stakingParametersGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20015>>;
     /**
      *
      * @summary Get the current state of the staking pool
@@ -15475,7 +15475,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingPoolGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20014>>;
+    stakingPoolGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20014>>;
     /**
      *
      * @summary Get all redelegations (filter by query params)
@@ -15486,7 +15486,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingRedelegationsGet(delegator?: string | undefined, validatorFrom?: string | undefined, validatorTo?: string | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<Redelegation>>>;
+    stakingRedelegationsGet(delegator?: string, validatorFrom?: string, validatorTo?: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Redelegation>>>;
     /**
      *
      * @summary Get all validator candidates. By default it returns only the bonded validators.
@@ -15497,7 +15497,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingValidatorsGet(status?: string | undefined, page?: number | undefined, limit?: number | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20013>>>;
+    stakingValidatorsGet(status?: string, page?: number, limit?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20013>>>;
     /**
      *
      * @summary Get all delegations from a validator
@@ -15506,7 +15506,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingValidatorsValidatorAddrDelegationsGet(validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20010>>>;
+    stakingValidatorsValidatorAddrDelegationsGet(validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20010>>>;
     /**
      *
      * @summary Query the information from a single validator
@@ -15515,7 +15515,7 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingValidatorsValidatorAddrGet(validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse20013>>;
+    stakingValidatorsValidatorAddrGet(validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse20013>>;
     /**
      *
      * @summary Get all unbonding delegations from a validator
@@ -15524,13 +15524,13 @@ export declare const StakingApiFp: (configuration?: Configuration | undefined) =
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingValidatorsValidatorAddrUnbondingDelegationsGet(validatorAddr: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Array<InlineResponse20011>>>;
+    stakingValidatorsValidatorAddrUnbondingDelegationsGet(validatorAddr: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<InlineResponse20011>>>;
 };
 /**
  * StakingApi - factory interface
  * @export
  */
-export declare const StakingApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const StakingApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Get all delegations from a delegator
@@ -15548,7 +15548,7 @@ export declare const StakingApiFactory: (configuration?: Configuration | undefin
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrDelegationsPost(delegatorAddr: string, delegation?: InlineObject4 | undefined, options?: any): AxiosPromise<InlineResponse2004Tx>;
+    stakingDelegatorsDelegatorAddrDelegationsPost(delegatorAddr: string, delegation?: InlineObject4, options?: any): AxiosPromise<InlineResponse2004Tx>;
     /**
      *
      * @summary Query the current delegation between a delegator and a validator
@@ -15568,7 +15568,7 @@ export declare const StakingApiFactory: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrRedelegationsPost(delegatorAddr: string, delegation?: InlineObject6 | undefined, options?: any): AxiosPromise<InlineResponse2004Tx>;
+    stakingDelegatorsDelegatorAddrRedelegationsPost(delegatorAddr: string, delegation?: InlineObject6, options?: any): AxiosPromise<InlineResponse2004Tx>;
     /**
      *
      * @summary Get all unbonding delegations from a delegator
@@ -15586,7 +15586,7 @@ export declare const StakingApiFactory: (configuration?: Configuration | undefin
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    stakingDelegatorsDelegatorAddrUnbondingDelegationsPost(delegatorAddr: string, delegation?: InlineObject5 | undefined, options?: any): AxiosPromise<InlineResponse2004Tx>;
+    stakingDelegatorsDelegatorAddrUnbondingDelegationsPost(delegatorAddr: string, delegation?: InlineObject5, options?: any): AxiosPromise<InlineResponse2004Tx>;
     /**
      *
      * @summary Query all unbonding delegations between a delegator and a validator
@@ -15642,7 +15642,7 @@ export declare const StakingApiFactory: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingRedelegationsGet(delegator?: string | undefined, validatorFrom?: string | undefined, validatorTo?: string | undefined, options?: any): AxiosPromise<Array<Redelegation>>;
+    stakingRedelegationsGet(delegator?: string, validatorFrom?: string, validatorTo?: string, options?: any): AxiosPromise<Array<Redelegation>>;
     /**
      *
      * @summary Get all validator candidates. By default it returns only the bonded validators.
@@ -15653,7 +15653,7 @@ export declare const StakingApiFactory: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    stakingValidatorsGet(status?: string | undefined, page?: number | undefined, limit?: number | undefined, options?: any): AxiosPromise<Array<InlineResponse20013>>;
+    stakingValidatorsGet(status?: string, page?: number, limit?: number, options?: any): AxiosPromise<Array<InlineResponse20013>>;
     /**
      *
      * @summary Get all delegations from a validator
@@ -15860,7 +15860,7 @@ export declare class StakingApi extends BaseAPI {
  * TendermintRPCApi - axios parameter creator
  * @export
  */
-export declare const TendermintRPCApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const TendermintRPCApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Get a block at a certain height
@@ -15903,7 +15903,7 @@ export declare const TendermintRPCApiAxiosParamCreator: (configuration?: Configu
  * TendermintRPCApi - functional programming interface
  * @export
  */
-export declare const TendermintRPCApiFp: (configuration?: Configuration | undefined) => {
+export declare const TendermintRPCApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Get a block at a certain height
@@ -15911,21 +15911,21 @@ export declare const TendermintRPCApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    blocksHeightGet(height: number, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2002>>;
+    blocksHeightGet(height: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002>>;
     /**
      *
      * @summary Get the latest block
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    blocksLatestGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2002>>;
+    blocksLatestGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2002>>;
     /**
      * Get if the node is currently syning with other nodes
      * @summary Syncing state of node
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    syncingGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2001>>;
+    syncingGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2001>>;
     /**
      *
      * @summary Get a validator set a certain height
@@ -15933,20 +15933,20 @@ export declare const TendermintRPCApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorsetsHeightGet(height: number, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2003>>;
+    validatorsetsHeightGet(height: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003>>;
     /**
      *
      * @summary Get the latest validator set
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    validatorsetsLatestGet(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2003>>;
+    validatorsetsLatestGet(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2003>>;
 };
 /**
  * TendermintRPCApi - factory interface
  * @export
  */
-export declare const TendermintRPCApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const TendermintRPCApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Get a block at a certain height
@@ -16039,7 +16039,7 @@ export declare class TendermintRPCApi extends BaseAPI {
  * TransactionsApi - axios parameter creator
  * @export
  */
-export declare const TransactionsApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const TransactionsApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      * Decode a transaction (signed or not) from base64-encoded Amino serialized bytes to JSON
      * @summary Decode a transaction from the Amino wire format
@@ -16071,7 +16071,7 @@ export declare const TransactionsApiAxiosParamCreator: (configuration?: Configur
      * @deprecated
      * @throws {RequiredError}
      */
-    txsGet: (messageAction?: string | undefined, messageSender?: string | undefined, page?: number | undefined, limit?: number | undefined, txMinheight?: number | undefined, txMaxheight?: number | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    txsGet: (messageAction?: string, messageSender?: string, page?: number, limit?: number, txMinheight?: number, txMaxheight?: number, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      * Retrieve a transaction using its hash.
      * @summary Get a Tx by hash
@@ -16094,7 +16094,7 @@ export declare const TransactionsApiAxiosParamCreator: (configuration?: Configur
  * TransactionsApi - functional programming interface
  * @export
  */
-export declare const TransactionsApiFp: (configuration?: Configuration | undefined) => {
+export declare const TransactionsApiFp: (configuration?: Configuration) => {
     /**
      * Decode a transaction (signed or not) from base64-encoded Amino serialized bytes to JSON
      * @summary Decode a transaction from the Amino wire format
@@ -16103,7 +16103,7 @@ export declare const TransactionsApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    txsDecodePost(tx: InlineObject2, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004Tx>>;
+    txsDecodePost(tx: InlineObject2, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004Tx>>;
     /**
      * Encode a transaction (signed or not) from JSON to base64-encoded Amino serialized bytes
      * @summary Encode a transaction to the Amino wire format
@@ -16112,7 +16112,7 @@ export declare const TransactionsApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    txsEncodePost(tx: InlineObject1, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2007>>;
+    txsEncodePost(tx: InlineObject1, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2007>>;
     /**
      * Search transactions by events.
      * @summary Search transactions
@@ -16126,7 +16126,7 @@ export declare const TransactionsApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    txsGet(messageAction?: string | undefined, messageSender?: string | undefined, page?: number | undefined, limit?: number | undefined, txMinheight?: number | undefined, txMaxheight?: number | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2005>>;
+    txsGet(messageAction?: string, messageSender?: string, page?: number, limit?: number, txMinheight?: number, txMaxheight?: number, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2005>>;
     /**
      * Retrieve a transaction using its hash.
      * @summary Get a Tx by hash
@@ -16135,7 +16135,7 @@ export declare const TransactionsApiFp: (configuration?: Configuration | undefin
      * @deprecated
      * @throws {RequiredError}
      */
-    txsHashGet(hash: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2004>>;
+    txsHashGet(hash: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2004>>;
     /**
      * Broadcast a signed tx to a full node
      * @summary Broadcast a signed tx
@@ -16143,13 +16143,13 @@ export declare const TransactionsApiFp: (configuration?: Configuration | undefin
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    txsPost(txBroadcast: InlineObject, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<InlineResponse2006>>;
+    txsPost(txBroadcast: InlineObject, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<InlineResponse2006>>;
 };
 /**
  * TransactionsApi - factory interface
  * @export
  */
-export declare const TransactionsApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const TransactionsApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      * Decode a transaction (signed or not) from base64-encoded Amino serialized bytes to JSON
      * @summary Decode a transaction from the Amino wire format
@@ -16181,7 +16181,7 @@ export declare const TransactionsApiFactory: (configuration?: Configuration | un
      * @deprecated
      * @throws {RequiredError}
      */
-    txsGet(messageAction?: string | undefined, messageSender?: string | undefined, page?: number | undefined, limit?: number | undefined, txMinheight?: number | undefined, txMaxheight?: number | undefined, options?: any): AxiosPromise<InlineResponse2005>;
+    txsGet(messageAction?: string, messageSender?: string, page?: number, limit?: number, txMinheight?: number, txMaxheight?: number, options?: any): AxiosPromise<InlineResponse2005>;
     /**
      * Retrieve a transaction using its hash.
      * @summary Get a Tx by hash
