@@ -1,0 +1,10 @@
+import { CosmosSDK } from '../../sdk';
+import { AccAddress, ConsAddress, ValAddress } from '../../types';
+export declare function slashingParams(sdk: CosmosSDK): Promise<import("axios").AxiosResponse<import("../../openapi/api").QueryParamsResponseIsTheResponseTypeForTheQueryParamsRPCMethod, any>>;
+export declare function signingInfos(sdk: CosmosSDK, paginationKey?: string, paginationOffset?: bigint, paginationLimit?: bigint, paginationCountTotal?: boolean): Promise<import("axios").AxiosResponse<import("../../openapi/api").QuerySigningInfosResponseIsTheResponseTypeForTheQuerySigningInfosRPCMethod, any>>;
+export declare function signingInfo(sdk: CosmosSDK, consAddress: ConsAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").QuerySigningInfoResponseIsTheResponseTypeForTheQuerySigningInfoRPCMethod, any>>;
+export declare function delegation(sdk: CosmosSDK, validatorAddr: ValAddress, delegatorAddr: AccAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20071, any>>;
+export declare function redelegations(sdk: CosmosSDK, delegatorAddr: AccAddress, srcValidatorAddr?: ValAddress, dstValidatorAddr?: ValAddress, paginationKey?: string, paginationOffset?: bigint, paginationLimit?: bigint, paginationCountTotal?: boolean): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20064, any>>;
+export declare function unbondingDelegation(sdk: CosmosSDK, validatorAddr: ValAddress, delegatorAddr: AccAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").InlineResponse20072, any>>;
+export declare function validators(sdk: CosmosSDK, status?: string, paginationKey?: string, paginationOffset?: bigint, paginationLimit?: bigint, paginationCountTotal?: boolean): Promise<import("axios").AxiosResponse<import("../../openapi/api").QueryValidatorsResponseIsResponseTypeForTheQueryValidatorsRPCMethod, any>>;
+export declare function validator(sdk: CosmosSDK, validatorAddr: ValAddress): Promise<import("axios").AxiosResponse<import("../../openapi/api").QueryValidatorResponseIsResponseTypeForTheQueryValidatorRPCMethod, any>>;

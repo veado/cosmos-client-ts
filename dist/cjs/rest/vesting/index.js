@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var proto_1 = require("../../proto");
+var types_1 = require("../../types");
+// export * as vesting from './module';
+types_1.codec.register('/cosmos.vesting.v1beta1.MsgCreateVestingAccount', proto_1.cosmos.vesting.v1beta1.MsgCreateVestingAccount);
+// codec.register('/cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccount', cosmos.vesting.v1beta1.MsgCreatePeriodicVestingAccount);
+// codec.register('/cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccount', cosmos.vesting.v1beta1.MsgCreatePermanentLockedAccount);
+types_1.codec.register('/cosmos.vesting.v1beta1.BaseVestingAccount', proto_1.cosmos.vesting.v1beta1.BaseVestingAccount);
+types_1.codec.register('/cosmos.vesting.v1beta1.ContinuousVestingAccount', proto_1.cosmos.vesting.v1beta1.ContinuousVestingAccount);
+types_1.codec.register('/cosmos.vesting.v1beta1.DelayedVestingAccount', proto_1.cosmos.vesting.v1beta1.DelayedVestingAccount);
+types_1.codec.register('/cosmos.vesting.v1beta1.PeriodicVestingAccount', proto_1.cosmos.vesting.v1beta1.PeriodicVestingAccount);
+types_1.codec.register('/cosmos.vesting.v1beta1.PermanentLockedAccount', proto_1.cosmos.vesting.v1beta1.PermanentLockedAccount);
